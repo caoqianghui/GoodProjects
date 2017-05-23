@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragemnt_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/news_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/px36"
+        android:paddingRight="@dimen/px36"
+        android:paddingLeft="@dimen/px36"
+        android:layout_marginTop="@dimen/px40"
+        android:layout_marginLeft="@dimen/px40"
+        android:layout_marginRight="@dimen/px40"
+        android:background="@drawable/recycler_bg">
+
+        <ImageView
+            android:id="@+id/news_first_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px600"
+
+            android:scaleType="fitXY"
+            android:src="@mipmap/s04"/>
+
+        <TextView
+            android:id="@+id/news_first_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/news_first_img"
+            android:background="#96000000"
+            android:gravity="center_vertical"
+            android:padding="@dimen/px30"
+            android:text="555555555555555555555555555555"
+            android:textColor="@color/colorWhite"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px40"
+        android:layout_marginRight="@dimen/px40"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_from"
+            android:background="#ffffff"
+            android:padding="@dimen/px40"
+            android:layout_marginBottom="@dimen/px50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px40"
+        android:layout_marginRight="@dimen/px40"
+        android:layout_marginBottom="@dimen/px30"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/woman"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px30"
+                android:text="萌小O"
+                android:textColor="#000000"/>
+
+            <com.go.cqh.goodprojects.widget.ImTextView
+                android:id="@+id/text_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/px40"
+                android:layout_marginTop="@dimen/px20"
+                android:text="6666666"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:jooyer_bubble_arrow_center="false"
+                app:jooyer_bubble_arrow_color="#FFB6C1"
+                app:jooyer_bubble_arrow_direction="jooyer_bubble_arrow_direction_left"
+                app:jooyer_bubble_arrow_height="@dimen/px10"
+                app:jooyer_bubble_arrow_offset="@dimen/px20"
+                app:jooyer_bubble_arrow_radius="@dimen/px60"
+                app:jooyer_bubble_arrow_width="@dimen/px30"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

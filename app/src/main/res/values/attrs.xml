@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CirCleRefreshLayout">
+        <attr name="AniBackColor" format="color" />
+        <attr name="AniForeColor" format="color" />
+        <attr name="CircleSmaller" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="JooyerBubble">
+        <!-- 三角箭头宽度 -->
+        <attr name="jooyer_bubble_arrow_width" format="dimension"/>
+        <!-- 三角箭头高度 -->
+        <attr name="jooyer_bubble_arrow_height" format="dimension"/>
+        <!-- 三角箭头位置(相对偏移量) -->
+        <attr name="jooyer_bubble_arrow_offset" format="dimension"/>
+        <!-- 气泡圆角半径 -->
+        <attr name="jooyer_bubble_arrow_radius" format="dimension"/>
+        <!-- 气泡背景颜色 -->
+        <attr name="jooyer_bubble_arrow_color" format="color"/>
+        <!-- 三角箭头是否居中 -->
+        <attr name="jooyer_bubble_arrow_center" format="boolean"/>
+        <!-- 三角箭头方向朝向 -->
+        <attr name="jooyer_bubble_arrow_direction" format="enum">
+            <enum name="jooyer_bubble_arrow_direction_left" value="0x00"/>
+            <enum name="jooyer_bubble_arrow_direction_top" value="0x01"/>
+            <enum name="jooyer_bubble_arrow_direction_right" value="0x02"/>
+            <enum name="jooyer_bubble_arrow_direction_bottom" value="0x03"/>
+        </attr>
+    </declare-styleable>
+</resources>

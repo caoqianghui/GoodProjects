@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragemnt_bg"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/px42"
+        android:layout_height="@dimen/px300"
+        android:background="@drawable/recycler_bg">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px60"
+                android:layout_marginLeft="@dimen/px30"
+                android:ellipsize="end"
+                android:lines="2"
+                android:textSize="45px"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/px30"
+                android:textColor="@color/item_title"
+                />
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px30"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/people"
+                    android:textSize="36px"
+                    android:textColor="@color/item_people"
+                    android:layout_marginLeft="@dimen/px30"
+                    android:maxWidth="@dimen/px360"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/timeItem"
+                    android:textSize="36px"
+                    android:textColor="@color/item_people"
+                    android:layout_marginLeft="@dimen/px30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/type"
+                    android:textSize="36px"
+                    android:textColor="@color/item_people"
+                    android:layout_marginLeft="@dimen/px30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/px300"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/px240"
+            android:layout_marginRight="@dimen/px30"
+            android:layout_marginLeft="@dimen/px30"
+            android:scaleType="centerCrop"/>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

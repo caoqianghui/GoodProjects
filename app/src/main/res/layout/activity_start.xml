@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/start_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/kan_2"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#08ffffff">
+
+        <ImageView
+            android:id="@+id/kan_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/kan_text_zh"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/px52"
+            android:src="@drawable/icon2"/>
+
+        <TextView
+            android:id="@+id/kan_text_zh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="看  点"
+            android:textColor="#FDFDFE"
+            android:textSize="60px"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/kan_text_es"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="99dp"
+            android:textColor="#FDFDFE"
+            android:textSize="@dimen/px60"/>
+
+        <TextView
+            android:id="@+id/kan_info_zh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/kan_text_es"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="从入门到放弃"
+            android:textColor="#FDFDFE"
+            android:textSize="45px"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id ="@+id/share"
+        android:icon="@mipmap/ic_menu_share_mtrl_alpha"
+        android:title="分享"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/robot"
+        android:orderInCategory="50"
+        android:title="智能小O"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/goUp"
+        android:orderInCategory="100"
+        android:title="@string/goUp"
+        android:visible="false"
+        app:showAsAction="never"/>
+    <item
+        android:id ="@+id/search"
+        android:icon="@mipmap/ic_search_api_mtrl_alpha"
+        android:title="搜索"
+        app:showAsAction="ifRoom" />
+</menu>

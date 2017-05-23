@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="maincolor">#009688</color>
+    <color name="text_Grey">#A9A9A9</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="press">#dadada</color>
+    <color name="normal">#ffffff</color>
+
+    <color name="swipe_color_1">#009688</color>
+    <color name="swipe_color_2">#2769f9</color>
+    <color name="swipe_color_3">#FF4081</color>
+    <color name="swipe_color_4">#0094cf</color>
+
+    <color name="warn_down">#0FC9B7</color>
+    <color name="black_img_bg">#000000</color>
+    <color name="black_bg">#00000000</color>
+    <color name="fragemnt_bg">#f0efed</color>
+
+    <color name="item_title">#333333</color>
+    <color name="item_people">#808080</color>
+
+</resources>

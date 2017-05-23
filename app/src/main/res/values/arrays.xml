@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tabs">
+        <item>Android</item>
+        <item>iOS</item>
+        <item>前端</item>
+        <item>App</item>
+        <item>休息视频</item>
+        <item>福利</item>
+        <item>拓展资源</item>
+        <item>瞎推荐</item>
+    </string-array>
+    <integer-array name="material_color">
+        <item>@color/swipe_color_1</item>
+        <item>@color/swipe_color_2</item>
+        <item>@color/swipe_color_3</item>
+        <item>@color/swipe_color_4</item>
+    </integer-array>
+</resources>

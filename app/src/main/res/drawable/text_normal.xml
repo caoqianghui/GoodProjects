@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#AAAAAA"/>
+            <corners
+                android:radius="6dp"/>
+        </shape>
+    </item>
+
+    <!-- top, bottom, left, right为此图层向内缩进的像素数-->
+    <item
+        android:bottom="2px"
+        android:left="2px"
+        android:right="2px"
+        android:top="2px">
+        <selector>
+            <item android:state_pressed="true">
+                <shape>
+                    <corners android:radius="5dp"/>
+                    <solid android:color="#d9d8d8"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:state_pressed="false">
+                    <corners android:radius="5dp"/>
+                    <solid android:color="#f9f8f5"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<group android:checkableBehavior="single">-->
+    <!--<item-->
+    <!--android:id="@+id/nav_camera"-->
+    <!--android:title="知乎学习"/>-->
+    <!--<item-->
+    <!--android:id="@+id/nav_gallery"-->
+    <!--android:title="搞笑视频"/>-->
+    <!--<item-->
+    <!--android:id="@+id/nav_slideshow"-->
+    <!--android:title="笑话"/>-->
+    <!--<item-->
+    <!--android:id="@+id/nav_manage"-->
+    <!--android:title="Tools"/>-->
+    <!--</group>-->
+
+    <item android:title="内容版块">
+        <menu>
+            <!--<item-->
+            <!--android:id="@+id/nav_share"-->
+            <!--android:title="分享"/>-->
+            <item
+                android:id="@+id/collect_menu"
+                android:title="收藏列表"/>
+            <item
+                android:id="@+id/nh_mh"
+                android:title="内涵漫画"/>
+            <item
+                android:id="@+id/qh"
+                android:title="趣话"/>
+            <item
+                android:id="@+id/news"
+                android:title="新闻天天看"/>
+            <item
+                android:id="@+id/history"
+                android:title="历史上的今天"/>
+        </menu>
+    </item>
+    <item android:title="娱乐版块">
+        <menu>
+            <item
+                android:id="@+id/jqr"
+                android:title="聊天机器人"/>
+            <item
+                android:id="@+id/im"
+                android:title="约聊"/>
+            <item
+                android:id="@+id/cts"
+                android:title="藏头诗"/>
+        </menu>
+    </item>
+
+</menu>

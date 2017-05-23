@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_open"
+        android:orderInCategory="100"
+        android:title="@string/browerOpen"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/copyUrl"
+        android:orderInCategory="100"
+        android:title="@string/copy"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/shareWeb"
+        android:orderInCategory="100"
+        android:title="@string/shareWeb"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_collect"
+        android:orderInCategory="100"
+        android:title="@string/collect"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/download"
+        android:orderInCategory="100"
+        android:title="@string/download"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/set"
+        android:orderInCategory="100"
+        android:title="设置为壁纸"
+        app:showAsAction="never"/>
+</menu>

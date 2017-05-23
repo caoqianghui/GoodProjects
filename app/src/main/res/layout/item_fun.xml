@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragemnt_bg"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px42"
+        android:background="@drawable/recycler_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fun_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px30"
+            android:layout_marginTop="@dimen/px60"
+            android:ellipsize="end"
+            android:lines="3"
+            android:textSize="45px"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/fun_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px800"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="@dimen/px36"
+            android:src="@mipmap/fault"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

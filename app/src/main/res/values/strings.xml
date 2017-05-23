@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">看点</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="goUp">setting</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="browerOpen">用浏览器打开</string>
+    <string name="collect">收藏</string>
+    <string name="copy">复制链接</string>
+    <string name="shareWeb">分享</string>
+    <string name="download">下载</string>
+    <string name="load_error">重新加载</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
