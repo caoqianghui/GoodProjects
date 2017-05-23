@@ -2,19 +2,32 @@ package com.go.cqh.goodprojects.base;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.os.Environment;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
+import com.go.cqh.goodprojects.R;
 import com.go.cqh.goodprojects.utils.DbUtil;
+import com.go.cqh.goodprojects.utils.PrefUtils;
+import com.go.cqh.goodprojects.utils.SystemUtil;
+import com.go.cqh.goodprojects.view.MainActivity;
 import com.go.cqh.goodprojects.widget.ActivityLifecycleHelper;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.SDKOptions;
+import com.netease.nimlib.sdk.StatusBarNotificationConfig;
+import com.netease.nimlib.sdk.auth.LoginInfo;
+import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
+import com.netease.nimlib.sdk.uinfo.UserInfoProvider;
 import com.taobao.android.SophixManager;
 import com.taobao.android.listener.PatchLoadStatusListener;
 import com.taobao.android.util.PatchStatus;
 import com.tencent.bugly.Bugly;
 import com.tencent.smtt.sdk.QbSdk;
 import com.yolanda.nohttp.NoHttp;
-
 
 /**
  * Created by caoqianghui on 2016/11/17.
@@ -28,6 +41,13 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         initApp();
+        //NIMPushClient.registerMixPushMessageHandler(new DemoMixPushMessageHandler());
+        NIMClient.init(this,new LoginInfo(PrefUtils.getString(this,"name"),PrefUtils.getString(this,"token")),options());
+        if (inMainProcess(getApplicationContext())) {
+            // 初始化UIKit模块
+            initUIKit();
+        }
+        /*Hotfix 2.0热更新*/
         SophixManager.getInstance().setContext(this)
                 .setAppVersion(appVersion)
                 .setAesKey(null)
@@ -111,5 +131,87 @@ public class BaseApplication extends Application {
                 }
             }
         }
+    }
+    public static boolean inMainProcess(Context context) {
+        String packageName = context.getPackageName();
+        String processName = SystemUtil.getProcessName(context);
+        return packageName.equals(processName);
+    }
+    private void initUIKit() {
+        // 初始化，使用 uikit 默认的用户信息提供者
+//        NimUIKit.init(this);
+
+        // 设置地理位置提供者。如果需要发送地理位置消息，该参数必须提供。如果不需要，可以忽略。
+//        NimUIKit.setLocationProvider(new NimDemoLocationProvider());
+
+        // 会话窗口的定制初始化。
+//        SessionHelper.init();
+
+        // 通讯录列表定制初始化
+//        ContactHelper.init();
+        // 添加自定义推送文案以及选项，请开发者在各端（Android、IOS、PC、Web）消息发送时保持一致，以免出现通知不一致的情况
+        // NimUIKit.CustomPushContentProvider(new DemoPushContentProvider());
+
+//        NimUIKit.setOnlineStateContentProvider(new DemoOnlineStateContentProvider());
+    }
+    /*================== 网易云信 Begin ==================*/
+    // 如果返回值为 null，则全部使用默认参数。
+    private SDKOptions options() {
+        SDKOptions options = new SDKOptions();
+
+        // 如果将新消息通知提醒托管给 SDK 完成，需要添加以下配置。否则无需设置。
+        StatusBarNotificationConfig config = new StatusBarNotificationConfig();
+        config.notificationEntrance = MainActivity.class; // 点击通知栏跳转到该Activity
+        config.notificationSmallIconId = R.mipmap.ic_launcher;
+        // 呼吸灯配置
+        config.ledARGB = Color.GREEN;
+        config.ledOnMs = 1000;
+        config.ledOffMs = 1500;
+        // 通知铃声的uri字符串
+        config.notificationSound = "android.resource://com.lqr.wechat/raw/msg";
+        options.statusBarNotificationConfig = config;
+
+        // 配置保存图片，文件，log 等数据的目录
+        // 如果 options 中没有设置这个值，SDK 会使用下面代码示例中的位置作为 SDK 的数据目录。
+        // 该目录目前包含 log, file, image, audio, video, thumb 这6个目录。
+        // 如果第三方 APP 需要缓存清理功能， 清理这个目录下面个子目录的内容即可。
+        String sdkPath = Environment.getExternalStorageDirectory() + "/" + getPackageName() + "/nim";
+        options.sdkStorageRootPath = sdkPath;
+
+        // 配置是否需要预下载附件缩略图，默认为 true
+        options.preloadAttach = true;
+
+        // 配置附件缩略图的尺寸大小。表示向服务器请求缩略图文件的大小
+        // 该值一般应根据屏幕尺寸来确定， 默认值为 Screen.width / 2
+        options.thumbnailSize = 720 / 2;
+
+        // 用户资料提供者, 目前主要用于提供用户资料，用于新消息通知栏中显示消息来源的头像和昵称
+        options.userInfoProvider = new UserInfoProvider() {
+            @Override
+            public UserInfo getUserInfo(String account) {
+                return null;
+            }
+
+            @Override
+            public int getDefaultIconResId() {
+                return R.mipmap.man;
+            }
+
+            @Override
+            public Bitmap getTeamIcon(String tid) {
+                return null;
+            }
+
+            @Override
+            public Bitmap getAvatarForMessageNotifier(String account) {
+                return null;
+            }
+
+            @Override
+            public String getDisplayNameForMessageNotifier(String account, String sessionId, SessionTypeEnum sessionType) {
+                return null;
+            }
+        };
+        return options;
     }
 }

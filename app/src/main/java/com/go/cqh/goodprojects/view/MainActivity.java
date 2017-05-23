@@ -240,7 +240,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             return true;
         }
         if (id == R.id.robot) {
-            startActivity(new Intent(MainActivity.this,IMActivity.class));
+            startActivity(new Intent(MainActivity.this, IMActivity.class));
             return true;
         }
         if (id == R.id.share) {
@@ -283,9 +283,15 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             case R.id.cts:
                 startActivity(new Intent(MainActivity.this, CtsActivity.class));
                 break;
-                /*即时通讯IM*/
+            /*即时通讯IM*/
             case R.id.im:
-                startActivity(new Intent(MainActivity.this, CtsActivity.class));
+                String name = PrefUtils.getString(getApplicationContext(), "name");
+                if (name != null && !name.equals("")) {
+                    startActivity(new Intent(MainActivity.this, ChatActivity.class));
+                } else {
+                    startActivity(new Intent(MainActivity.this, ImRActivity.class));
+                }
+
                 break;
             /*历史上的今天*/
             case R.id.history:
